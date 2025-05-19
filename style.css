@@ -94,6 +94,8 @@ body {
 
 
 
+
+
 /* бургер */
 .navbar {
     display: flex;
@@ -231,6 +233,10 @@ a {
 .sours ul li a:hover {
     border-bottom-width: 3px;
 }
+.header-menu-list {
+  margin-top: 15px;
+  margin-left: 5px;
+}
 .header-menu-list a {
   margin-left: 5px;
   color: #fff;
@@ -276,8 +282,11 @@ a {
     list-style: none;
 }
 .navigation ul li {
-    font-size: 13px;
+    font-size: 16px;
     color: #fff;
+}
+.navigation ul li:first-child {
+  color: #000;
 }
 .sours {
     text-align: center;
@@ -309,7 +318,7 @@ a {
     margin: 0 auto;
 }
 
-.section h1 {
+#skaz {
     margin: 0 auto;
     width: 100px;
     padding-bottom: 10px;
@@ -431,6 +440,9 @@ a {
     font-size: var(--normal-font-size);
 }
 
+.nazmi {
+  padding-bottom: 15px;
+}
 
 /*  */
 .card-company h2{
@@ -645,6 +657,17 @@ body {
     gap: .5rem;
     margin-top: 40px;
 }
+/* @property --color-gradiend-start {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: #ff7e5f;
+}
+@property --color-gradiend-end {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: #e5cb36;
+} */
+
 .modal_btn {
     flex-grow: 1;
     outline: none;
@@ -652,13 +675,27 @@ body {
     font-size: 25px;
     border-radius: 12px;
     background: linear-gradient(to right, #ff7e5f, #feb47b);
+  /* background-image: linear-gradient(
+    90deg,
+    var(--color-gradiend-start) 0%,
+    var(--color-gradient-end) 100%
+  );
+  transition: 
+    --color-gradient-start 1s,
+    --color-gradiend-end 1s;
+
+    &:hover {
+      --color-gradient-start: #feb47b;
+      --color-gradient-end: #dda376;
+    } */
     padding-block: 1rem;
     color: var(--white-color);
     cursor: pointer;
-    transition: background-color .4s;
+    transition: all 0.5s;
 }
 .modal_btn:hover {
-    background-color: var(--first-color-alt);
+
+    filter: saturate(2);
 }
 
 .modal_btn_ghost {
@@ -673,10 +710,10 @@ body {
     padding-block: 1rem;
     color: var(--white-color);
     cursor: pointer;
-    transition: background-color .4s;
+    transition: all 0.5s;
 }
 .modal_btn_ghost:hover {
-    background-color: white;
+    filter: saturate(2);
 }
 
 .active-modal {
@@ -822,6 +859,100 @@ input[name="r"] {
 #r4:checked ~ .s1 {
   margin-left: -75%;
 }
+/*  */
+#r5:checked ~ .s2 {
+  margin-left: 0;
+}
+#r6:checked ~ .s2 {
+  margin-left: -25%;
+}
+#r7:checked ~ .s2 {
+  margin-left: -50%;
+}
+#r8:checked ~ .s2 {
+  margin-left: -75%;
+}
+/*  */
+#r9:checked ~ .s3 {
+  margin-left: 0;
+}
+#r10:checked ~ .s3 {
+  margin-left: -25%;
+}
+#r11:checked ~ .s3 {
+  margin-left: -50%;
+}
+#r12:checked ~ .s3 {
+  margin-left: -75%;
+}
+/*  */
+#r13:checked ~ .s4 {
+  margin-left: 0;
+}
+#r14:checked ~ .s4 {
+  margin-left: -25%;
+}
+#r15:checked ~ .s4 {
+  margin-left: -50%;
+}
+#r16:checked ~ .s4 {
+  margin-left: -75%;
+}
+/*  */
+#r17:checked ~ .s5 {
+  margin-left: 0;
+}
+#r18:checked ~ .s5 {
+  margin-left: -25%;
+}
+#r19:checked ~ .s5 {
+  margin-left: -50%;
+}
+#r20:checked ~ .s5 {
+  margin-left: -75%;
+}
+/*  */
+#r21:checked ~ .s6 {
+  margin-left: 0;
+}
+#r22:checked ~ .s6 {
+  margin-left: -25%;
+}
+#r23:checked ~ .s6 {
+  margin-left: -50%;
+}
+#r24:checked ~ .s6 {
+  margin-left: -75%;
+}
+/*  */
+#r25:checked ~ .s7 {
+  margin-left: 0;
+}
+#r26:checked ~ .s7 {
+  margin-left: -25%;
+}
+#r27:checked ~ .s7 {
+  margin-left: -50%;
+}
+#r28:checked ~ .s7 {
+  margin-left: -75%;
+}
+/* 
+ */
+#r29:checked ~ .s8 {
+  margin-left: 0;
+}
+#r30:checked ~ .s8 {
+  margin-left: -25%;
+}
+#r31:checked ~ .s8 {
+  margin-left: -50%;
+}
+#r32:checked ~ .s8 {
+  margin-left: -75%;
+}
+
+/*  */
 
 .modal_card-wrapper {
   display: flex;
@@ -850,7 +981,7 @@ input[name="r"] {
         margin-left: -200px;
         width: 100%;
     }
-    .section h1 {
+    #skaz {
         margin-left: 200px;
         padding-left: 150px;
     }
@@ -967,7 +1098,7 @@ input[name="r"] {
     text-align: center;
   }
 
-  .section h1 {
+  #skaz {
     padding-left: 0;
     margin: 0 auto;
     margin-bottom: 20px;
@@ -1209,7 +1340,7 @@ input[name="r"] {
     text-align: center;
   }
 
-  .section h1 {
+  #skaz {
     padding-left: 0;
     margin: 0 auto;
     margin-bottom: 20px;
@@ -1466,7 +1597,7 @@ input[name="r"] {
       text-align: start;
     }
 
-    .section h1 {
+    #skaz {
       padding-left: 0;
       margin: 0 auto;
       margin-bottom: 20px;
@@ -1497,7 +1628,8 @@ input[name="r"] {
     }
 
     .scaz-img {
-      margin-bottom: 60px;
+      margin-bottom: 30px;
+      margin-top: 20px;
     }
 
     .hr {
